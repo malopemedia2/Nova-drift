@@ -1,0 +1,19 @@
+{
+  "id": "./",
+  "name": "Nova Drift",
+  "short_name": "Nova Drift",
+  "description": "Pilot your ship, blast the drones, and survive the asteroid field.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#070b1a",
+  "theme_color": "#070b1a",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

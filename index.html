@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#070b1a" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>Nova Drift</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.svg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="hud">
+      <div class="panel">
+        <span>Score</span>
+        <strong id="score">0</strong>
+      </div>
+      <div class="panel">
+        <span>Health</span>
+        <strong id="health">3</strong>
+      </div>
+      <div class="panel">
+        <span>Wave</span>
+        <strong id="wave">1</strong>
+      </div>
+      <div class="panel">
+        <span>Best</span>
+        <strong id="best">0</strong>
+      </div>
+    </div>
+
+    <canvas id="gameCanvas" width="900" height="560" aria-label="Game canvas"></canvas>
+
+    <div class="touch-controls" aria-label="Touch game controls">
+      <div class="direction-pad" aria-label="Move">
+        <button type="button" data-game-key="ArrowUp" aria-label="Move up">▲</button>
+        <button type="button" data-game-key="ArrowLeft" aria-label="Move left">◀</button>
+        <button type="button" data-game-key="ArrowDown" aria-label="Move down">▼</button>
+        <button type="button" data-game-key="ArrowRight" aria-label="Move right">▶</button>
+      </div>
+      <div class="touch-actions">
+        <button type="button" data-game-key="p" aria-label="Pause game">Ⅱ</button>
+        <button type="button" class="fire-button" data-game-key=" " aria-label="Fire">FIRE</button>
+      </div>
+    </div>
+
+    <div id="overlay" class="overlay visible">
+      <div class="card">
+        <h1 id="overlayTitle">Nova Drift</h1>
+        <p id="overlayMessage">Pilot your ship, blast the drones, and survive the asteroid field.</p>
+        <div class="controls">
+          <span><kbd>WASD</kbd> / <kbd>Arrows</kbd> Move</span>
+          <span><kbd>Space</kbd> Fire</span>
+          <span><kbd>P</kbd> Pause</span>
+        </div>
+        <label class="difficulty-picker" for="difficulty">
+          Difficulty
+          <select id="difficulty">
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="legendary">Legendary</option>
+          </select>
+        </label>
+        <div class="actions">
+          <button id="installButton" class="secondary-button" type="button">Install Game</button>
+          <button id="startButton" type="button">Start Game</button>
+        </div>
+        <p id="installHelp" class="install-help" aria-live="polite"></p>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+    <script src="install.js"></script>
+  </body>
+</html>
